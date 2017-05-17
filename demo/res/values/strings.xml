@@ -13,6 +13,8 @@
     <string name="remove">Remove</string>
     <string name="add">Add</string>
     <string name="visibility">Toggle Vis</string>
+
+
     <string-array name="heatmaps_datasets_array">
         <item>@string/police_stations</item>
         <item>@string/medicare</item>

@@ -39,10 +39,10 @@ public class PolySimplifyDemoActivity extends BaseDemoActivity {
         GoogleMap mMap = getMap();
 
         // Original line
-        List<LatLng> line = PolyUtil.decode(LINE);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(line)
-                .color(Color.BLACK));
+//        List<LatLng> line = PolyUtil.decode(LINE);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(line)
+//                .color(Color.BLACK));
 
         getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(28.05870, -82.4090), 15));
 
@@ -52,61 +52,61 @@ public class PolySimplifyDemoActivity extends BaseDemoActivity {
          * Simplified lines - increasing the tolerance will result in fewer points in the simplified
          * line
          */
-        double tolerance = 5; // meters
-        simplifiedLine = PolyUtil.simplify(line, tolerance);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(simplifiedLine)
-                .color(Color.RED - ALPHA_ADJUSTMENT));
+//        double tolerance = 5; // meters
+//        simplifiedLine = PolyUtil.simplify(line, tolerance);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(simplifiedLine)
+//                .color(Color.RED - ALPHA_ADJUSTMENT));
+//
+//        tolerance = 20; // meters
+//        simplifiedLine = PolyUtil.simplify(line, tolerance);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(simplifiedLine)
+//                .color(Color.GREEN - ALPHA_ADJUSTMENT));
+//
+//        tolerance = 50; // meters
+//        simplifiedLine = PolyUtil.simplify(line, tolerance);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(simplifiedLine)
+//                .color(Color.MAGENTA - ALPHA_ADJUSTMENT));
+//
+//        tolerance = 500; // meters
+//        simplifiedLine = PolyUtil.simplify(line, tolerance);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(simplifiedLine)
+//                .color(Color.YELLOW - ALPHA_ADJUSTMENT));
+//
+//        tolerance = 1000; // meters
+//        simplifiedLine = PolyUtil.simplify(line, tolerance);
+//        mMap.addPolyline(new PolylineOptions()
+//                .addAll(simplifiedLine)
+//                .color(Color.BLUE - ALPHA_ADJUSTMENT));
 
-        tolerance = 20; // meters
-        simplifiedLine = PolyUtil.simplify(line, tolerance);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(simplifiedLine)
-                .color(Color.GREEN - ALPHA_ADJUSTMENT));
 
-        tolerance = 50; // meters
-        simplifiedLine = PolyUtil.simplify(line, tolerance);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(simplifiedLine)
-                .color(Color.MAGENTA - ALPHA_ADJUSTMENT));
+//        // Triangle polygon - the polygon should be closed
+//        ArrayList<LatLng> triangle = new ArrayList<>();
+//        triangle.add(new LatLng(28.06025,-82.41030));  // Should match last point
+//        triangle.add(new LatLng(28.06129,-82.40945));
+//        triangle.add(new LatLng(28.06206,-82.40917));
+//        triangle.add(new LatLng(28.06125,-82.40850));
+//        triangle.add(new LatLng(28.06035,-82.40834));
+//        triangle.add(new LatLng(28.06038, -82.40924));
+//        triangle.add(new LatLng(28.06025,-82.41030));  // Should match first point
+//
+//        mMap.addPolygon(new PolygonOptions()
+//                .addAll(triangle)
+//                .fillColor(Color.BLUE - ALPHA_ADJUSTMENT)
+//                .strokeColor(Color.BLUE)
+//                .strokeWidth(5));
 
-        tolerance = 500; // meters
-        simplifiedLine = PolyUtil.simplify(line, tolerance);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(simplifiedLine)
-                .color(Color.YELLOW - ALPHA_ADJUSTMENT));
-
-        tolerance = 1000; // meters
-        simplifiedLine = PolyUtil.simplify(line, tolerance);
-        mMap.addPolyline(new PolylineOptions()
-                .addAll(simplifiedLine)
-                .color(Color.BLUE - ALPHA_ADJUSTMENT));
-
-
-        // Triangle polygon - the polygon should be closed
-        ArrayList<LatLng> triangle = new ArrayList<>();
-        triangle.add(new LatLng(28.06025,-82.41030));  // Should match last point
-        triangle.add(new LatLng(28.06129,-82.40945));
-        triangle.add(new LatLng(28.06206,-82.40917));
-        triangle.add(new LatLng(28.06125,-82.40850));
-        triangle.add(new LatLng(28.06035,-82.40834));
-        triangle.add(new LatLng(28.06038, -82.40924));
-        triangle.add(new LatLng(28.06025,-82.41030));  // Should match first point
-
-        mMap.addPolygon(new PolygonOptions()
-                .addAll(triangle)
-                .fillColor(Color.BLUE - ALPHA_ADJUSTMENT)
-                .strokeColor(Color.BLUE)
-                .strokeWidth(5));
-
-        // Simplified triangle polygon
-        tolerance = 88; // meters
-        List simplifiedTriangle = PolyUtil.simplify(triangle, tolerance);
-        mMap.addPolygon(new PolygonOptions()
-                .addAll(simplifiedTriangle)
-                .fillColor(Color.YELLOW - ALPHA_ADJUSTMENT)
-                .strokeColor(Color.YELLOW)
-                .strokeWidth(5));
+//        // Simplified triangle polygon
+//        tolerance = 88; // meters
+//        List simplifiedTriangle = PolyUtil.simplify(triangle, tolerance);
+//        mMap.addPolygon(new PolygonOptions()
+//                .addAll(simplifiedTriangle)
+//                .fillColor(Color.YELLOW - ALPHA_ADJUSTMENT)
+//                .strokeColor(Color.YELLOW)
+//                .strokeWidth(5));
 
         // Oval polygon - the polygon should be closed
         List<LatLng> oval = PolyUtil.decode(OVAL_POLYGON);
@@ -117,12 +117,12 @@ public class PolySimplifyDemoActivity extends BaseDemoActivity {
                 .strokeWidth(5));
 
         // Simplified oval polygon
-        tolerance = 10; // meters
-        List simplifiedOval= PolyUtil.simplify(oval, tolerance);
-        mMap.addPolygon(new PolygonOptions()
-                .addAll(simplifiedOval)
-                .fillColor(Color.YELLOW - ALPHA_ADJUSTMENT)
-                .strokeColor(Color.YELLOW)
-                .strokeWidth(5));
+//        tolerance = 10; // meters
+//        List simplifiedOval= PolyUtil.simplify(oval, tolerance);
+//        mMap.addPolygon(new PolygonOptions()
+//                .addAll(simplifiedOval)
+//                .fillColor(Color.YELLOW - ALPHA_ADJUSTMENT)
+//                .strokeColor(Color.YELLOW)
+//                .strokeWidth(5));
     }
 }
