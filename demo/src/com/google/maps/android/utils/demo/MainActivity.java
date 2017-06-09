@@ -60,7 +60,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private TextView t;
     private LocationManager locationManager;
     private LocationListener listener;
-
+    public static double lonnit;
 
 
     @Override
@@ -78,11 +78,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
-
+        startActivity(new Intent(this, PolySimplifyDemoActivity.class));
         listener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
                 t.append("\n " + location.getLongitude() + " " + location.getLatitude());
+                lonnit = location.getLongitude();
             }
 
             @Override
